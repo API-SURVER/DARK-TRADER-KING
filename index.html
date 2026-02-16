@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARK TRADER KING</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@600;700&display=swap');
+
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #000; font-family: 'Rajdhani', sans-serif; }
+        #game-frame { width: 100%; height: 100vh; border: none; position: fixed; z-index: 1; }
+
+        /* HUD MAIN BOX */
+        #profit-hud {
+            position: absolute; 
+            top: 15%; 
+            left: 50%; 
+            transform: translateX(-50%);
+            width: 230px; 
+            z-index: 1000000;
+            background: rgba(5, 10, 15, 0.98);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 202, 0.4);
+            box-shadow: 0 0 30px rgba(0, 255, 202, 0.2);
+            overflow: hidden;
+            pointer-events: auto;
+            user-select: none;
+            touch-action: none;
+        }
+
+        /* DRAG HANDLE */
+        #drag-handle {
+            width: 100%; height: 35px; cursor: grab;
+            background: linear-gradient(90deg, #00ffca11, #00ffca44, #00ffca11);
+            display: flex; align-items: center; justify-content: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        #drag-handle:active { cursor: grabbing; }
+        .handle-line { width: 40px; height: 4px; background: #00ffca; border-radius: 10px; box-shadow: 0 0 10px #00ffca; }
+
+        /* STATUS BAR - Updated for longer time string */
+        #status-bar {
+            display: flex; justify-content: space-between; padding: 6px 10px;
+            font-size: 8px; color: #888; background: rgba(0,0,0,0.5);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-family: 'Orbitron', sans-serif;
+        }
+        .stat-item { display: flex; align-items: center; gap: 3px; }
+        #win-rate { color: #00ffca; font-weight: bold; }
+
+        .content { padding: 12px; text-align: center; }
+        
+        /* LOGIN AREA */
+        #auth-view { padding: 5px; display: block; }
+        .input-key {
+            width: 100%; padding: 12px; background: #000; border: 1px solid #00ffca;
+            border-radius: 10px; color: #fff; text-align: center; outline: none;
+            margin-bottom: 15px; font-size: 14px; box-sizing: border-box;
+            display: block;
+        }
+        .btn-activate {
+            width: 100%; padding: 12px; background: #00ffca; color: #000;
+            border: none; border-radius: 10px; font-weight: 900; 
+            font-family: 'Orbitron', sans-serif; cursor: pointer; font-size: 11px;
+            box-shadow: 0 0 15px rgba(0, 255, 202, 0.4);
+        }
+
+        /* SIGNAL AREA */
+        #signal-view { display: none; }
+        .grid-mini { display: flex; gap: 8px; justify-content: center; }
+
+        .card {
+            flex: 1; background: rgba(255, 255, 255, 0.03); border-radius: 12px;
+            padding: 10px 2px; text-align: center; border-bottom: 2px solid #00ffca;
+        }
+        .card-1m { border-bottom: 2px solid #ff0055; }
+
+        .label { font-size: 7px; color: #aaa; text-transform: uppercase; margin-bottom: 4px; }
+        .res-text { font-family: 'Orbitron', sans-serif; font-size: 18px; font-weight: 900; margin: 3px 0; }
+        .nums { font-size: 11px; color: #fff; font-weight: bold; background: rgba(0,255,202,0.1); padding: 2px 8px; border-radius: 5px; }
+        .timer { font-size: 10px; font-weight: 800; color: #00ffca; margin-top: 6px; }
+
+        .stability { font-size: 8px; color: #555; margin-top: 10px; }
+        .tg-link { display: block; margin-top: 10px; font-size: 10px; color: #00ffca; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+
+    <iframe id="game-frame" src="https://tkclub2.com/#/register?invitationCode=16621180332"></iframe>
+    #document
+      <!doctype html>
+       <html lang="en" translate="no" data-dpr="1" dir="ltr" style="font-size: 54px;"><head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/svg+xml" href="https://static.tkclub.vip/TKCLUB/other/h5setting_20250603163915qco2.png">
+		<meta name="google" content="notranslate">
+		<meta name="robots" content="noindex,nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!--Select configuration files dynamically-->
+		<link rel="manifest">
+		<title>TKCLUB</title>
+		<script type="module" crossorigin="" src="/assets/js/index-381d699f.js"></script>
+		<link rel="modulepreload" crossorigin="" href="/assets/js/modules-9d97244d.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/custom/Win338/en-4c35f7ba.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/custom/Win338/id-5a4f716a.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/native/index-c102cc77.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/en-480e7fbc.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/rus-9c721d00.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/vi-baadc274.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/id-a2f9c309.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/hd-ed4fa70b.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/tha-185183b0.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/md-945d7f73.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/bra-45412a7f.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/my-703e6274.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/bdt-857f5526.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/zh-dffa9fd7.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/pak-384a1636.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/ar-a612d3da.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/page-activity-68e7d1f3.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/page-wheel-cd7ac557.js">
+		<link rel="modulepreload" crossorigin="" href="/assets/js/page-home-7f66f746.js">
+		<link rel="stylesheet" href="/assets/css/modules-5dd73da0.css">
+		<link rel="stylesheet" href="/assets/css/page-activity-19717049.css">
+		<link rel="stylesheet" href="/assets/css/page-wheel-65f9dd58.css">
+		<link rel="stylesheet" href="/assets/css/page-home-1ac692bc.css">
+		<link rel="stylesheet" href="/assets/css/index-50a87796.css">
+	<link rel="stylesheet" href="/assets/css/reset-6140e39a.css"><link rel="modulepreload" as="script" crossorigin="" href="/assets/js/page-register-2cbf7544.js"><link rel="modulepreload" as="script" crossorigin="" href="/assets/js/page-login-5df04162.js"><link rel="stylesheet" href="/assets/css/page-login-98c5b85e.css"><link rel="stylesheet" href="/assets/css/index-23749fa9.css"><script type="text/javascript" src="cordova.js"></script></head>
+
+	<body style="font-size: 12px;">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0; height: 0">
+  <div id="profit-hud">
+        <div id="drag-handle"><div class="handle-line"></div></div>
+        
+        <div id="status-bar">
+            <div class="stat-item">🕒 <span id="clock">00:00:00</span></div>
+            <div class="stat-item">🏆 <span id="win-rate">98.5%</span></div>
+            <div class="stat-item">🔋 <span id="battery">--%</span></div>
+        </div>
+
+        <div class="content">
+            <div id="auth-view">
+                <div style="font-size: 11px; color:#00ffca; margin-bottom:12px; font-family: 'Orbitron';">DARK TRADER KING</div>
+                <input type="password" id="keyInput" class="input-key" placeholder="ENTER KEY HERE">
+                <button class="btn-activate" id="loginBtn">ACTIVATE</button>
+            </div>
+
+            <div id="signal-view">
+                <div class="grid-mini">
+                    <div class="card">
+                        <div class="label">WINGO 30S</div>
+                        <div id="r30" class="res-text" style="color:#00ffca">...</div>
+                        <div class="nums" id="n30">0,0</div>
+                        <div class="timer">NEXT: <span id="t30">00</span>s</div>
+                    </div>
+                    <div class="card card-1m">
+                        <div class="label" style="color:#ff0055">WINGO 1M</div>
+                        <div id="r1m" class="res-text" style="color:#ff0055">...</div>
+                        <div class="nums" id="n1m">0,0</div>
+                        <div class="timer" style="color:#ff0055">NEXT: <span id="t1m">00</span>s</div>
+                    </div>
+                </div>
+                <div class="stability">Stability: <span style="color:#00ffca">99.9% Online</span></div>
+                <a href="https://t.me/Dark_Communityy0" class="tg-link">JOIN TELEGRAM</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const hud = document.getElementById('profit-hud');
+        const handle = document.getElementById('drag-handle');
+        const loginBtn = document.getElementById('loginBtn');
+        const keyInput = document.getElementById('keyInput');
+        const authView = document.getElementById('auth-view');
+        const signalView = document.getElementById('signal-view');
+
+        // --- 1. DRAG AND DROP ---
+        let isDragging = false, offsetX, offsetY;
+        handle.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            offsetX = e.clientX - hud.getBoundingClientRect().left;
+            offsetY = e.clientY - hud.getBoundingClientRect().top;
+            hud.style.transition = 'none';
+        });
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            hud.style.left = (e.clientX - offsetX) + 'px';
+            hud.style.top = (e.clientY - offsetY) + 'px';
+            hud.style.transform = 'none';
+        });
+        document.addEventListener('mouseup', () => isDragging = false);
+
+        handle.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            let touch = e.touches[0];
+            offsetX = touch.clientX - hud.getBoundingClientRect().left;
+            offsetY = touch.clientY - hud.getBoundingClientRect().top;
+            hud.style.transition = 'none';
+        });
+        document.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            let touch = e.touches[0];
+            hud.style.left = (touch.clientX - offsetX) + 'px';
+            hud.style.top = (touch.clientY - offsetY) + 'px';
+            hud.style.transform = 'none';
+        });
+        document.addEventListener('touchend', () => isDragging = false);
+
+        // --- 2. LOGIN ---
+        loginBtn.onclick = function() {
+            if(keyInput.value === "Apexdark") {
+                authView.style.display = 'none';
+                signalView.style.display = 'block';
+                startEngine();
+            } else { alert("WRONG KEY!"); }
+        };
+
+        // --- 3. UPDATED ENGINE (CLOCK & BATTERY) ---
+        function startEngine() {
+            // Local Time with Seconds & Battery
+            setInterval(() => {
+                const now = new Date();
+                // 12-hour format with seconds (e.g., 02:45:10 PM)
+                document.getElementById('clock').innerText = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
+
+                // Real Battery Percentage
+                if (navigator.getBattery) {
+                    navigator.getBattery().then(function(battery) {
+                        document.getElementById('battery').innerText = Math.floor(battery.level * 100) + "%";
+                    });
+                }
+            }, 1000);
+
+            // Pattern: 2 BIG, 2 SML, 1 BIG, 2 SML, 2 BIG, 1 SML, 2 BIG, 2 SML
+            const pattern = ["BIG", "BIG", "SML", "SML", "BIG", "SML", "SML", "BIG", "BIG", "SML", "BIG", "BIG", "SML", "SML"];
+
+            function getMarketSignal(period, marketType) {
+                let index = marketType === '30s' ? period : (period + 5); 
+                let res = pattern[index % pattern.length];
+                let n1, n2;
+
+                if (res === "BIG") {
+                    let b = [5, 6, 7, 8, 9];
+                    let off = marketType === '30s' ? 0 : 2;
+                    n1 = b[(period + off) % 5];
+                    n2 = b[(period + off + 1) % 5];
+                } else {
+                    let s = [0, 1, 2, 3, 4];
+                    let off = marketType === '30s' ? 1 : 4;
+                    n1 = s[(period + off) % 5];
+                    n2 = s[(period + off + 1) % 5];
+                }
+                return { r: res, n: n1 + ", " + n2 };
+            }
+
+            setInterval(() => {
+                const now = new Date();
+                const sec = now.getSeconds();
+                const ms = now.getTime();
+
+                let p30 = Math.floor(ms / 30000);
+                let t30 = sec >= 30 ? 60 - sec : 30 - sec;
+                let sig30 = getMarketSignal(p30, '30s');
+
+                let p1m = Math.floor(ms / 60000);
+                let t1m = 60 - sec;
+                let sig1m = getMarketSignal(p1m, '1m');
+
+                document.getElementById('r30').innerText = sig30.r;
+                document.getElementById('n30').innerText = sig30.n;
+                document.getElementById('t30').innerText = t30.toString().padStart(2, '0');
+
+                document.getElementById('r1m').innerText = sig1m.r;
+                document.getElementById('n1m').innerText = sig1m.n;
+                document.getElementById('t1m').innerText = t1m.toString().padStart(2, '0');
+            }, 1000);
+        }
+    </script>
+
+<style>.qc-cmp-showing { visibility: hidden !important; } body.didomi-popup-open { overflow: auto !important; } #didomi-host { visibility: hidden !important; }</style></body></html>
